@@ -16,7 +16,8 @@ namespace CSV.ROSData.Core
         throw new ArgumentException("csvString is null or empty.");
 #endif
 
-      string[] statisticsAndImagesAsString = Regex.Split(csvString,COLS_VALS_IMAGES_DELIMITER);
+      string[] statisticsAndImagesAsString
+        = Regex.Split(csvString,COLS_VALS_IMAGES_DELIMITER);
 
       StatisticsAsString = statisticsAndImagesAsString[0];
 
@@ -26,27 +27,36 @@ namespace CSV.ROSData.Core
       }
       else if (statisticsAndImagesAsString.Length > 1)
       {
-        ImagesAsString = new string[statisticsAndImagesAsString.Length - 1];
-
-        for (int i = 1; i < statisticsAndImagesAsString.Length; i++)
-        {
-          ImagesAsString[i - 1] = Regex.Replace
-          (
-            statisticsAndImagesAsString[i],
-            REGEX_ONLY_DIGITS_WITH_DELIMITER,String.Empty
-          );
-        }
+        ImagesAsString = GetImagesAsString(statisticsAndImagesAsString);
       }
     }
 
-    protected string   StatisticsAsString { get; set; }
-    protected string[] ImagesAsString     { get; set; }
+
+    private static string[] GetImagesAsString(string[] csvData)
+    {
+      string[] imagesAsString = new string[csvData.Length - 1];
+
+      for (int i = 1; i < csvData.Length; i++)
+      {
+        imagesAsString[i - 1] = Regex.Replace
+        (
+          csvData[i],
+          REGEX_ONLY_DIGITS_WITH_DELIMITER,String.Empty
+        );
+      }
+
+      return imagesAsString;
+    }
 
 
     protected const string VALS_DELIMITER                 = ",";
     protected const string COLS_VALS_IMAGES_DELIMITER     = ",\"";
    
     private const string REGEX_ONLY_DIGITS_WITH_DELIMITER = @"[^\d^\,]";
+
+
+    protected string   StatisticsAsString { get; set; }
+    protected string[] ImagesAsString     { get; set; }
 
 
     public string[] ParseStatistics()
@@ -72,10 +82,10 @@ namespace CSV.ROSData.Core
       return images;
     }
 
+
     protected static Image ParseImage(string frameAsString)
     {
       string[] frameBufferAsString = Regex.Split(frameAsString,VALS_DELIMITER);
-
       byte[]   frameBuffer         = new byte[frameAsString.Length];
 
       for (int i = 0; i < frameBufferAsString.Length; i++)
