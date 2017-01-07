@@ -7,14 +7,12 @@ namespace ROSDataViewer.GUI
 {
   public partial class MainForm : Form
   {
+    private CsvFileReader CsvFilesReader { get; set; }
+
+
     public MainForm()
     {
       InitializeComponent();
-    }
-
-
-    private void MainForm_Load(object sender,EventArgs e)
-    {
     }
 
 
@@ -41,9 +39,6 @@ namespace ROSDataViewer.GUI
         ShowData(CsvFilesReader.ReadNext());
       }
     }
-
-
-    private CsvFileReader CsvFilesReader { get; set; }
 
 
     private void SetupStatisticsDataGridView()
