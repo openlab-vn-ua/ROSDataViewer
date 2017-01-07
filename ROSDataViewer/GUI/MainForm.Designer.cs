@@ -36,7 +36,7 @@
       this.mainDataGridView = new System.Windows.Forms.DataGridView();
       this.mainPictureBox = new System.Windows.Forms.PictureBox();
       this.navigationGroupBox = new System.Windows.Forms.GroupBox();
-      this.positionInCsvFilePercentTrackBar = new ROSDataViewer.GUI.Controls.PercentTrackBar();
+      this.positionInCsvFilePercentTrackBar = new WinForms.Controls.PercentTrackBar();
       ((System.ComponentModel.ISupportInitialize)(this.mainSplitContainer)).BeginInit();
       this.mainSplitContainer.Panel1.SuspendLayout();
       this.mainSplitContainer.Panel2.SuspendLayout();
@@ -190,7 +190,7 @@
     private System.Windows.Forms.ToolStripMenuItem openCsvFile;
     private System.Windows.Forms.ToolStripMenuItem prevDataFromCsvFile;
     private System.Windows.Forms.ToolStripMenuItem nextDataFromCsvFile;
-    private Controls.PercentTrackBar positionInCsvFilePercentTrackBar;
+    private WinForms.Controls.PercentTrackBar positionInCsvFilePercentTrackBar;
     private System.Windows.Forms.PictureBox mainPictureBox;
     private System.Windows.Forms.DataGridView mainDataGridView;
     private System.Windows.Forms.GroupBox navigationGroupBox;

@@ -3,7 +3,7 @@ using System;
 using System.IO;
 
 
-namespace CSV.ROSData.Core
+namespace TextFormatFiles.ExtremeSizes.Core
 {
   public class TextFileReader : IDisposable
   {
@@ -13,10 +13,12 @@ namespace CSV.ROSData.Core
       PrevPositions   = new Stack<long>();
     }
 
+
     ~TextFileReader()
     {
       CsvStreamReader.Close();
     }
+
 
     public void Dispose()
     {
@@ -24,6 +26,7 @@ namespace CSV.ROSData.Core
 
       GC.SuppressFinalize(this);
     }
+
 
     protected StreamReader CsvStreamReader { get; private set; }
     private   Stack<long>  PrevPositions   { get; set; }
@@ -62,11 +65,13 @@ namespace CSV.ROSData.Core
     }
 
 
+    /// <summary>
+    /// Reads the data and set the trigger at the beginning of the next line.
+    /// Can be a situation when you specify the
+    /// position trigger is set to the middle or other position in the line.
+    /// </summary>
     private void AdjustTriggerPositionToBeginningOfLine()
     {
-      // Reads the data and set the trigger at the beginning of the next line.
-      // *Can be a situation when you specify the
-      // position trigger is set to the middle or other position in the line.*
       CsvStreamReader.ReadLine();
     }
 
@@ -79,6 +84,7 @@ namespace CSV.ROSData.Core
       }
     }
 
+
     public long EndPositionOfReading
     {
       get
@@ -86,6 +92,7 @@ namespace CSV.ROSData.Core
         return CsvStreamReader.BaseStream.Length;
       }
     }
+
 
     public long CurrentPositionOfReading
     {

@@ -2,7 +2,7 @@
 using System;
 
 
-namespace ROSDataViewer.GUI.Controls
+namespace WinForms.Controls
 {
   public sealed class PercentTrackBar : TrackBar
   {
@@ -15,6 +15,7 @@ namespace ROSDataViewer.GUI.Controls
       base.Maximum = MAX_PERCENT;
       base.Minimum = MIN_PERCENT;
     }
+
 
     public new long Maximum { get; set; }
     public new long Minimum { get; set; }

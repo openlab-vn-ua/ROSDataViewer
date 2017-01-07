@@ -2,22 +2,15 @@
 using System.IO;
 using System;
 using System.Drawing;
-using System.Collections.Generic;
 
 
-namespace CSV.ROSData.Core
+namespace TextFormatFiles.ExtremeSizes.Core
 {
   public class CsvTextParser
   {
     public CsvTextParser(string csvString)
     {
-#if DEBUG
-      if (String.IsNullOrEmpty(csvString))
-        throw new ArgumentException("csvString is null or empty.");
-#endif
-
-      string[] statisticsAndImagesAsString
-        = Regex.Split(csvString,COLS_VALS_IMAGES_DELIMITER);
+      string[] statisticsAndImagesAsString = Regex.Split(csvString,COLS_VALS_IMAGES_DELIMITER);
 
       StatisticsAsString = statisticsAndImagesAsString[0];
 
