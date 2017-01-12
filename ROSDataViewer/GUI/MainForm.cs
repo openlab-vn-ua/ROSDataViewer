@@ -83,7 +83,9 @@ namespace ROSDataViewer.GUI
 
     private void SetToStatisticsDataGridView(string[] statistics)
     {
-      for (int i = 0; i < mainDataGridView.Columns.Count; i++)
+      int length = Math.Min(statistics.Length,mainDataGridView.Columns.Count);
+
+      for (int i = 0; i < length; i++)
       {
         mainDataGridView[i,0].Value = statistics[i];
       }
