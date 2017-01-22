@@ -1,6 +1,6 @@
 OVERVIEW
 -----------------------
-Application for reading *.CSV (convert from ROSBag) files extreme sizes.
+Application to read and navigation the text files (including *.CSV (convert from ROSBag)) files extreme sizes.
 
 *.BAG files get from https://github.com/udacity/self-driving-car/tree/master/datasets
 
