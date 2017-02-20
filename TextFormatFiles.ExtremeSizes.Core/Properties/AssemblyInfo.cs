@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("OPENLAB-VN-UA")]
 [assembly: AssemblyProduct("TextFormatFiles.ExtremeSizes.Core")]
-[assembly: AssemblyCopyright("Copyright © 2017 OPENLAB-VN-UA")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
