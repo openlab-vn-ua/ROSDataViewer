@@ -5,7 +5,7 @@ VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ROSDataViewer", "ROSDataViewer\ROSDataViewer.csproj", "{43CD83EA-19D5-4E5B-9286-986063F69874}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextFormatFiles.ExtremeSizes.Core", "TextFormatFiles.ExtremeSizes.Core\TextFormatFiles.ExtremeSizes.Core.csproj", "{4338FCEE-3DC6-4B09-A2D5-2AB58E7728C9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TxtFiles.ExtremeLengths", "TxtFiles.ExtremeLengths\TxtFiles.ExtremeLengths.csproj", "{4338FCEE-3DC6-4B09-A2D5-2AB58E7728C9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinForms.Controls", "WinForms.Controls\WinForms.Controls.csproj", "{3A612498-46B0-4704-A5F0-441BFFDD5127}"
 EndProject

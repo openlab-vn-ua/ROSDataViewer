@@ -10,15 +10,15 @@ namespace WinForms.Controls
     private const int MIN_PERCENT = 1;
 
 
+    public new long Maximum { get; set; }
+    public new long Minimum { get; set; }
+
+
     public PercentTrackBar()
     {
       base.Maximum = MAX_PERCENT;
       base.Minimum = MIN_PERCENT;
     }
-
-
-    public new long Maximum { get; set; }
-    public new long Minimum { get; set; }
 
 
     public new long Value
@@ -32,11 +32,11 @@ namespace WinForms.Controls
       {
         if (value >= MIN_PERCENT && this.Maximum >= MIN_PERCENT)
         {
-          int percent = (int)(value * MAX_PERCENT / this.Maximum);
+          int valueTemp = (int)(value * MAX_PERCENT / this.Maximum);
 
-          if (percent > 0)
+          if (valueTemp > 0)
           {
-            base.Value = percent;
+            base.Value = valueTemp;
           }
         }
       }

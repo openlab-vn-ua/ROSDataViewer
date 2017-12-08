@@ -3,14 +3,18 @@ using System;
 using System.IO;
 
 
-namespace TextFormatFiles.ExtremeSizes.Core
+namespace TxtFiles.ExtremeLengths
 {
   public class TextFileReader : IDisposable
   {
+    protected StreamReader CsvStreamReader { get; private set; }
+    private   Positions    PrevPositions   { get; set; }
+
+
     public TextFileReader(string fileName)
     {
       CsvStreamReader = new StreamReader(fileName);
-      PrevPositions   = new Stack<long>();
+      PrevPositions   = new Positions();
     }
 
 
@@ -26,10 +30,6 @@ namespace TextFormatFiles.ExtremeSizes.Core
 
       GC.SuppressFinalize(this);
     }
-
-
-    protected StreamReader CsvStreamReader { get; private set; }
-    private   Stack<long>  PrevPositions   { get; set; }
 
 
     public string ReadNextLine()
@@ -70,7 +70,7 @@ namespace TextFormatFiles.ExtremeSizes.Core
     /// Can be a situation when you specify the
     /// position trigger is set to the middle or other position in the line.
     /// </summary>
-    private void AdjustTriggerPositionToBeginningOfLine()
+    protected virtual void AdjustTriggerPositionToBeginningOfLine()
     {
       CsvStreamReader.ReadLine();
     }

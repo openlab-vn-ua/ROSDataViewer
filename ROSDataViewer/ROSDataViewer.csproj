@@ -79,9 +79,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TextFormatFiles.ExtremeSizes.Core\TextFormatFiles.ExtremeSizes.Core.csproj">
+    <ProjectReference Include="..\TxtFiles.ExtremeLengths\TxtFiles.ExtremeLengths.csproj">
       <Project>{4338fcee-3dc6-4b09-a2d5-2ab58e7728c9}</Project>
-      <Name>TextFormatFiles.ExtremeSizes.Core</Name>
+      <Name>TxtFiles.ExtremeLengths</Name>
     </ProjectReference>
     <ProjectReference Include="..\WinForms.Controls\WinForms.Controls.csproj">
       <Project>{3a612498-46b0-4704-a5f0-441bffdd5127}</Project>

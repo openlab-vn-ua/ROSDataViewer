@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("TextFormatFiles.ExtremeSizes.Core")]
+[assembly: AssemblyTitle("TxtFiles.ExtremeLengths")]
 [assembly: AssemblyDescription("Classes for work with files(text format) extreme sizes.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("OPENLAB-VN-UA")]
-[assembly: AssemblyProduct("TextFormatFiles.ExtremeSizes.Core")]
+[assembly: AssemblyProduct("TxtFiles.ExtremeLengths")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
