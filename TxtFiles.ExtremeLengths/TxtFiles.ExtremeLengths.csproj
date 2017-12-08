@@ -7,8 +7,8 @@
     <ProjectGuid>{4338FCEE-3DC6-4B09-A2D5-2AB58E7728C9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TextFormatFiles.ExtremeSizes.Core</RootNamespace>
-    <AssemblyName>TextFormatFiles.ExtremeSizes.Core</AssemblyName>
+    <RootNamespace>TxtFiles.ExtremeLengths</RootNamespace>
+    <AssemblyName>TxtFiles.ExtremeLengths</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -41,9 +41,10 @@
     <Reference Include="System.Drawing" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CsvData.cs" />
-    <Compile Include="CsvFileReader.cs" />
-    <Compile Include="CsvTextParser.cs" />
+    <Compile Include="CsvRbValue.cs" />
+    <Compile Include="CsvRbFileReader.cs" />
+    <Compile Include="CsvRbTextParser.cs" />
+    <Compile Include="Positions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TextFileReader.cs" />
   </ItemGroup>

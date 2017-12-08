@@ -1,4 +1,4 @@
-﻿using TextFormatFiles.ExtremeSizes.Core;
+﻿using TxtFiles.ExtremeLengths;
 using System;
 using System.Windows.Forms;
 
@@ -7,7 +7,7 @@ namespace ROSDataViewer.GUI
 {
   public partial class MainForm : Form
   {
-    private CsvFileReader CsvFilesReader { get; set; }
+    private CsvRbFileReader CsvFilesReader { get; set; }
 
 
     public MainForm()
@@ -25,7 +25,7 @@ namespace ROSDataViewer.GUI
 
       if (openFileDialog.ShowDialog() == DialogResult.OK)
       {
-        CsvFilesReader = new CsvFileReader(openFileDialog.FileName);
+        CsvFilesReader = new CsvRbFileReader(openFileDialog.FileName);
 
         positionInCsvFilePercentTrackBar.Minimum = CsvFilesReader.BeginPositionOfReading;
         positionInCsvFilePercentTrackBar.Maximum = CsvFilesReader.EndPositionOfReading;
@@ -59,20 +59,20 @@ namespace ROSDataViewer.GUI
     }
 
 
-    private void ShowData(CsvData csvData)
+    private void ShowData(CsvRbValue csvRbValue)
     {
-      if (csvData != null)
+      if (csvRbValue != null)
       {
-        if (csvData.Images != null && csvData.Images.Length >= 1)
+        if (csvRbValue.Images != null && csvRbValue.Images.Length >= 1)
         {
-          mainPictureBox.Image = csvData.Images[0];
+          mainPictureBox.Image = csvRbValue.Images[0];
         }
         //else
         //{
         //  IGNORE
         //}
       
-        SetToStatisticsDataGridView(csvData.Statistics);
+        SetToStatisticsDataGridView(csvRbValue.Values);
       }
       else
       {
